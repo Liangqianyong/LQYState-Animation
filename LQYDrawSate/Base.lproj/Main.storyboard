@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAL-K5-ufc">
+                                <rect key="frame" x="66" y="120" width="96.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Wwo-ld-a0w"/>
+                                </constraints>
+                                <state key="normal" title="成功"/>
+                                <connections>
+                                    <action selector="successClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m2c-gq-Ad8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lan-V6-cYx">
+                                <rect key="frame" x="212.5" y="120" width="96.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SMB-ju-Vje"/>
+                                </constraints>
+                                <state key="normal" title="失败"/>
+                                <connections>
+                                    <action selector="failClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AHb-EV-fe5"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="izl-VB-unJ">
+                                <rect key="frame" x="152.5" y="298.5" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="0cH-5b-oDK"/>
+                                    <constraint firstAttribute="width" constant="70" id="H36-pm-BsB"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gwu-JP-MVD">
+                                <rect key="frame" x="152.5" y="398.5" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="H2d-di-vbq"/>
+                                    <constraint firstAttribute="height" constant="70" id="INr-ok-FPt"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lan-V6-cYx" firstAttribute="leading" secondItem="lAL-K5-ufc" secondAttribute="trailing" constant="50" id="1xZ-3K-4zH"/>
+                            <constraint firstItem="Lan-V6-cYx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="6jL-jM-BS8"/>
+                            <constraint firstItem="izl-VB-unJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8Aa-gK-ve1"/>
+                            <constraint firstItem="izl-VB-unJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H8Z-fk-sex"/>
+                            <constraint firstItem="lAL-K5-ufc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="PYf-Jd-jgx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lan-V6-cYx" secondAttribute="trailing" constant="50" id="TNd-VS-TtE"/>
+                            <constraint firstItem="gwu-JP-MVD" firstAttribute="top" secondItem="izl-VB-unJ" secondAttribute="bottom" constant="30" id="XHD-zz-7c6"/>
+                            <constraint firstItem="gwu-JP-MVD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gsH-lp-pDs"/>
+                            <constraint firstItem="Lan-V6-cYx" firstAttribute="width" secondItem="lAL-K5-ufc" secondAttribute="width" id="h79-M2-TBl"/>
+                            <constraint firstItem="lAL-K5-ufc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="qrM-4h-s2v"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="failView" destination="gwu-JP-MVD" id="ROY-H1-jNb"/>
+                        <outlet property="imageView" destination="izl-VB-unJ" id="QQO-rt-4Dd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
